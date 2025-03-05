@@ -1,0 +1,36 @@
+1. Write a program to print your name. 
+
+print("My name is Satya Abhinaya Bushala ")
+
+2. Write a program for a Single line comment and multi-line comments.
+
+''' Multiple lined comments in python are written inside the thriple single quotes.
+like this.......................
+print("Hiii ")
+print("HELLO WORLD ")
+
+'''
+
+# This is single- line commenting. Example: print("Hii")
+#print("Hello world")
+
+3. Define variables for different Data Types int, Boolean, char, float, double and print on the Console.
+
+a=1
+b=1.0
+c="HELLO"
+var=True
+print(a,"is", type(a),"datatype") 
+print(b,"is", type(b),"datatype")
+print(c,"is", type(c),"datatype")
+print(var,"is", type(var),"datatype") 
+
+4. Define the local and Global variables with the same name and print both variables and understand the scope of the variables.
+
+def fun(a):
+    print("Global Vairable inside function:",a)   # prints global variable value passed through arguments during function call
+    a=3
+    print("Local variable inside function:", a)   # prints local variable which redefined in the function
+a=5
+fun(a)
+print("Global Variable outside function: ",a)
