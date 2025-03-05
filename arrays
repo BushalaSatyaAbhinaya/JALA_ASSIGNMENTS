@@ -28,17 +28,171 @@ for i in range(0,len(l)+1):
         break
 
 4. Write a function to test if array contains a specific value
+
+l=[12,15,16,18,20]
+n=int(input("Enter a number : "))
+c=0
+for i in l:
+    if n==i:
+        c+=1
+        print(n,"exists")
+        break
+if c==0:
+    print("Element doesn't exists")
+
 5. Write a function to remove a specific element from an array
+
+l=[12,15,16,18,20]
+n=int(input("Enter a number : "))
+c=0
+for i in l:
+    if n==i:
+        c+=1
+        l.remove(i)
+if c==0:
+    print("Element doesn't exists")
+else:
+    print("New list :",l)
+
 6. Write a function to copy an array to another array
+
+def fun(new_list):
+    l.extend(new_list)
+    print(l)
+l=[1,2,3,4,5]
+new_list=list(map(int,input().split()))
+fun(new_list)
+
 7. Write a function to insert an element at a specific position in the array
+
+def fun(x,pos):
+    l.insert(pos,x)
+    print(l)
+l=[1,2,3,4,5]
+x=int(input("enter element you want to enter:"))
+pos=int(input("Enter the position where you want to enter:"))
+fun(x,pos)
+
 8. Write a function to find the minimum and maximum value of an array
+
+l=list(map(int,input("Enter list elements").split()))
+mini=l[0]
+maxi=l[0]
+for i in l:
+    if i <mini:
+        mini=i
+    elif i>maxi:
+        maxi=i
+print("Minimum value:",mini)
+print("Maximum value:",maxi)
+
 9. Write a function to reverse an array of integer values
+
+l=[1,2,3,4,5]
+for i in range(len(l)-1,-1,-1):
+    print(l[i],end=" ")
+
 10. Write a function to find the duplicate values of an array
+
+l=[1,2,2,3,4,5,3,3]
+d=[]
+u=[]
+for i in l:
+    if i not in u:
+        u.append(i)
+    elif i not in d:
+        d.append(i)
+print(d)
+
 11. Write a program to find the common values between two arrays
+
+L1=[1,2,3,4,5,6]
+L2=[1,5,7,8,9,10]
+print("Common elements in lists are:")
+for i in L1:
+    for j in L2:
+        if i==j:
+            print(i,end=" ")
+
 12. Write a method to remove duplicate elements from an array
+
+L1=[1,2,3,4,5,6]
+L2=[1,5,7,8,9,10]
+print("Common elements in lists are:")
+for i in L1:
+    for j in L2:
+        if i==j:
+            L1.remove(i)
+            L2.remove(j)
+print("New lists after removing common elements:")
+print(L1)
+print(L2)
+
 13. Write a method to find the second largest number in an array
+
+l=list(map(int,input("Enter list elements").split()))
+maxi=l[0]
+for i in l:
+    if i>maxi:
+        maxi=i
+l.remove(maxi)
+maxi=l[0]
+for i in l:
+    if i>maxi:
+        maxi=i
+print("Second Largest value:",maxi)
+
 14. Write a method to find the second largest number in an array
+
+l=list(map(int,input("Enter list elements").split()))
+maxi=l[0]
+for i in l:
+    if i>maxi:
+        maxi=i
+l.remove(maxi)
+maxi=l[0]
+for i in l:
+    if i>maxi:
+        maxi=i
+print("Second Largest value:",maxi)
+
 15. Write a method to find number of even number and odd numbers in an array
+
+l=[11,42,33,54,15,16]
+for i in l:
+    if i%2==0:
+        print(i,"is Even")
+    else:
+        print(i,"is Odd")
+
 16. Write a function to get the difference of largest and smallest value
+
+l=list(map(int,input("Enter list elements").split()))
+mini=l[0]
+maxi=l[0]
+for i in l:
+    if i <mini:
+        mini=i
+    elif i>maxi:
+        maxi=i
+print("Difference between",mini,"and",maxi,"is",maxi-mini)
+
 17. Write a method to verify if the array contains two specified elements(12,23)
+
+l=[10, 12, 13, 23]
+if 12 in l:
+    print("12 exists")
+else:
+    print("12 doesn't exists")
+if 23 in l:
+    print("23 exists")
+else:
+    print("23 doesn't exists")
+    
 18. Write a program to remove the duplicate elements and return the new array
+l=[1,2,2,3,4,5,3,3]
+unique=[]
+for i in l:
+    if i not in u:
+        unique.append(i)
+print(unique)
