@@ -1,0 +1,61 @@
+1. Write a function for arithmetic operators(+,-,*,/)
+
+def operators(a,b,op):
+    if op=='+':
+        print("Addition of",a,"and",b,"is",a+b)
+    elif op=='-':
+        print("Addition of",a,"and",b,"is",a-b)
+    elif op=='*':
+        print("Addition of",a,"and",b,"is",a*b)
+    elif op=='/':
+        print("Addition of",a,"and",b,"is",a/b)
+a=3
+b=5
+op=input("Enter any operator")
+operators(a,b,op)
+
+2. Write a method for increment and decrement operators(++, --)
+
+def incre_decre(a,op):
+    if op=="increment" or op=="Increment":
+        print(a+1)
+    elif op=="decrement" or op=="Decrement":
+        print(a-1)
+a=3
+print("What operation you want to perform?")
+op=input("Enter increment or decrement :")
+incre_decre(a,op)
+
+3. Write a program to find the two numbers
+a=int(input("Enter first number:"))
+b=int(input("Enter second number:"))
+if a==b:
+    print("Equal")
+else:
+    print("Not equal")
+
+4. Program for relational operators (<,<=, >, >=)
+
+a=3
+a=3
+b=6
+print(a<b)
+print(a>b)
+print(a<=b)
+print(a>=b)
+print(a==b)
+print(a!=b)
+
+5. Print the smaller and larger number
+
+l=[2,3,5,6,1,9,7]
+smaller=l[0]
+larger=l[0]
+for i in l:
+    if i<smaller:
+        smaller=i
+    elif i>larger:
+        larger=i
+print("Smallest number in",l,"is",smaller)
+print("Larger number in",l,"is",larger)
+
