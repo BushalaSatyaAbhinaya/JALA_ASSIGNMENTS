@@ -1,0 +1,32 @@
+1. Define a static variable and access that through a class
+
+class myClass:
+    static_var=0
+print(myClass.static_var)
+
+2. Define a static variable and access that through a instance
+
+class myClass:
+    static_var=5
+obj=myClass()
+print(obj.static_var)
+
+3. Define a static variable and change within the instance
+
+class myClass:
+    static_var=5
+
+obj=myClass()
+obj.static_var=10
+print(obj.static_var)
+
+4. Define a static variable and change within the class
+
+class myClass:
+    static_var="Hii"
+    @classmethod
+    def function(cls,value):
+        cls.static_var=value
+        
+myClass.function("Hello")
+print(myClass.static_var)
