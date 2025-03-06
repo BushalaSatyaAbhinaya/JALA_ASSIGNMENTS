@@ -1,0 +1,20 @@
+class ClassOne:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello, {self.name}! (Class One) ")
+
+class ClassTwo:
+    def __init__(self, age):
+        self.age = age
+
+    def info(self):
+        print(f"You are {self.age} years old. (Class Two)")
+
+if __name__ == "__main__":
+    
+    class_one_obj = ClassOne("Abhi")
+    class_one_obj.greet()  
+    class_two_obj = ClassTwo(25)
+    class_two_obj.info()
