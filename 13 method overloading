@@ -1,0 +1,40 @@
+1. Write two methods with the same name but different number of parameters of same type and call the methods
+class MyClass:
+    def display(self, param1):
+        print(f"One parameter: {param1}")
+    
+    def display(self, param1, param2=None):
+        if param2:
+            print(f"Two parameters: {param1} and {param2}")
+        else:
+            print(f"One parameter: {param1}")
+
+if __name__ == "__main__":
+    obj = MyClass()
+    obj.display("Hello")
+    obj.display("Hello", "World")
+    
+2. Write two methods with the same name but different number of parameters of different data type and call the methods
+class MyClass:
+    def show(self, param1, param2=None):
+        if param2 is None:
+            print(f"String parameter: {param1}")
+        else:
+            print(f"String parameter: {param1} and Integer parameter: {param2}")
+
+if __name__ == "__main__":
+    obj = MyClass()
+    obj.show("Hello")
+    obj.show("Hello", 123)
+
+3. Write two methods with the same name and same number of parameters of same type
+class MyClass:
+    def add(self, num1):
+        print(f"Adding one number: {num1}")
+    
+    def add(self, num1):
+        print(f"Adding the same number: {num1}")
+
+if __name__ == "__main__":
+    obj = MyClass()
+    obj.add(10)
