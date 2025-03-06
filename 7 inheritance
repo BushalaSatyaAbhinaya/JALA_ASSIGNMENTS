@@ -1,0 +1,26 @@
+A, B and C are classes
+A is a super class. B is a sub class of A. C is a sub class of B.
+Create three methods in each class, 2 methods are specific to each class and third method (override method) should be in all three Classes A, B and C
+Create a class with main method. Create an object for each class A, B and C in main method and call every method of each class using its own object/instance.
+Call an overridden method with super class reference to B and C class’s objects
+Runtime Polymorphism with Data Members/Instance variables, Repeat the above process only for data members
+
+class A:
+    def fun_A(a):
+        print("class A")
+    def fun(self):
+        print("overriden method in class A by C")
+class B(A):
+    def fun_B(b):
+        print("class B")
+    def fun(self):
+        print("overriden method in class B by C")
+class C(B):
+    def fun(self):
+        print("Method in class C which overrides class A and B ")
+obj1=A()
+obj1.fun_A()
+obj2=B()
+obj2.fun_B()
+obj3=C()
+obj3.fun()
