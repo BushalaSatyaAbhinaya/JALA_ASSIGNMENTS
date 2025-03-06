@@ -1,0 +1,89 @@
+1. Different ways creating a string
+
+s1='Hello World'
+s2="Hello world"
+s3='''Hello World'''
+s4="""Hello world"""
+s5="'Hello World'"
+s6='"Hello World"'
+print(s1)
+print(s2)
+print(s3)
+print(s4)
+print(s5)
+print(s6)
+
+2. Concatenating two strings using + operator
+
+s1=input("Enter first string")
+s2=input("Enter second string")
+print(s1+s2)
+
+3. Finding the length of the string
+
+str="Hello World"
+print("Length of string is ",len(str))
+
+4. Extract a string using Substring
+
+str="Hello World"
+print(str[0:6])
+
+5. Searching in strings using index()
+
+str="Hello World"
+s1="World"
+print("Position of",s1,"in",str,"is",str.index(s1))
+
+6. Matching a String Against a Regular Expression With matches()
+
+import re
+string="Hello world"
+str=r"Hello"
+m=bool(re.match(str,string))
+print(m)
+
+7. Comparing strings
+
+str1=input("Enter a string")
+str2=input("Enter another string")
+if str1==str2:
+    print("Strings equal")
+else:
+    print("Strings are not equal")
+
+8. startsWith(), endsWith() and compareTo()
+
+str="Hello world"
+print(str.startswith("Hello"))
+print(str.endswith("world"))
+
+9. Trimming strings with strip()
+
+str="  Hello world"
+s=str.strip()
+print(s)
+
+10. Replacing characters in strings with replace()
+
+str="Hello world"
+print(str.replace("Hello","Hii"))
+
+11. Splitting strings with split()
+
+str="Hello world"
+print(str.split(" "))
+
+12. Converting integer objects to Strings
+
+n="10"
+x=str(n)
+print(x)
+print(type(x))
+
+13. Converting to uppercase and lowercase
+
+s1="HELLO"
+s2="world"
+print(s1.lower())
+print(s2.upper())
