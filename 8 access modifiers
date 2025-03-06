@@ -1,0 +1,126 @@
+1. Create a class with PRIVATE fields, private method and a main method. Print the fields in main method. Call the private method in main method.
+Create a sub class and try to access the private fields and methods from sub class.
+
+class Parent:
+    def __init__(self, name, age):
+        self.__name = name  
+        self.__age = age    
+    
+    def __display_info(self):  
+        print(f"Name: {self.__name}, Age: {self.__age}")
+    
+    def access_private_method(self):
+        self.__display_info()  
+
+class Child(Parent):
+    def try_access_private(self):
+        try:
+            print(self.__name)  
+        except AttributeError:
+            print("Cannot access private field __name from subclass")
+        
+        try:
+            self.__display_info()  
+        except AttributeError:
+            print("Cannot access private method __display_info from subclass")
+
+def main():
+    obj = Parent("Lakshmi", 38)
+    obj.access_private_method()
+    
+    child_obj = Child("Abhi", 19)
+    child_obj.try_access_private()  
+
+if __name__ == "__main__":
+    main()
+
+2. Create a class with PROTECTED fields and methods. Access these fields and methods from any other class in the same package.
+Also, Access the PROTECTED fields and methods from child class located in a different package
+Access the PROTECTED fields and methods from any class in different package
+
+class MyClass:
+    def __init__(self):
+        
+        self._protected_var = "Protected Value"
+    
+    
+    def _protected_method(self):
+        return "This is a protected method"
+
+
+class AnotherClass:
+    def __init__(self):
+        self.obj = MyClass()
+        
+        print(self.obj._protected_var)
+        print(self.obj._protected_method())
+
+
+class ChildClass(MyClass):
+    def __init__(self):
+        super().__init__()
+        print(self._protected_var)
+        print(self._protected_method())
+
+
+class ExternalClass:
+    def __init__(self):
+        self.obj = MyClass()
+        print(self.obj._protected_var)
+        print(self.obj._protected_method())
+
+
+if __name__ == "__main__":
+    print("From AnotherClass (Same Package):")
+    another_obj = AnotherClass()
+
+    print("\nFrom ChildClass (Different Package):")
+    child_obj = ChildClass()
+
+    print("\nFrom ExternalClass (Different Package):")
+    external_obj = ExternalClass()
+
+
+3. Create a class with PUBLIC fields and methods.
+Access the public methods and fields from any class in the same package or different package.
+class Parent:
+    def __init__(self, name, age):
+        self.name = name  
+        self.age = age    
+    
+    def display_info(self):  
+        print(f"Name: {self.name}, Age: {self.age}")
+
+
+class AnotherClass:
+    def access_public(self):
+        obj = Parent("Lakshmi", 35)
+        print(f"Accessing public field: {obj.name}, {obj.age}")
+        obj.display_info()
+
+
+class Child(Parent):
+    def access_public_from_child(self):
+        print(f"Accessing public field from child: {self.name}, {self.age}")
+        self.display_info()
+
+
+class ExternalClass:
+    def access_public(self):
+        obj = Parent("Krishna", 40)
+        print(f"Accessing public field: {obj.name}, {obj.age}")
+        obj.display_info()
+
+
+def main():
+    print(" Access from AnotherClass ")
+    AnotherClass().access_public()
+    
+    print("\n Access from Child Class ")
+    Child("Abhi", 19).access_public_from_child()
+    
+    print("\n Access from ExternalClass ")
+    ExternalClass().access_public()
+
+if __name__ == "__main__":
+    main()
