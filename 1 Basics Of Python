@@ -28,9 +28,9 @@ print(var,"is", type(var),"datatype")
 4. Define the local and Global variables with the same name and print both variables and understand the scope of the variables.
 
 def fun(a):
-    print("Global Vairable inside function:",a)   # prints global variable value passed through arguments during function call
+    print("Global Vairable inside function:",a)   
     a=3
-    print("Local variable inside function:", a)   # prints local variable which redefined in the function
+    print("Local variable inside function:", a)   
 a=5
 fun(a)
 print("Global Variable outside function: ",a)
